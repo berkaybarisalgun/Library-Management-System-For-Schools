@@ -27,6 +27,6 @@ Use the reporting feature to generate reports on the usage of library materials.
 # Changelog
 
 # v1.0.0(2023-02-06)
-Fixed a bug where the application was crashing when opening certain files
+Fixed a bug where the application was crashing when opening certain files<br>
 Improved code readability by using descriptive variable names and adding comments where necessary
 
