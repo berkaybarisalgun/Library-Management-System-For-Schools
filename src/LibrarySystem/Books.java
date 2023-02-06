@@ -62,7 +62,9 @@ public class Books extends JFrame implements ActionListener {
 		 if(e.getSource() == b1){
             try{
                 t1.print();
-            }catch(Exception e1){}
+            }catch(Exception e1){
+            	e1.printStackTrace();
+            }
         }
 
 	}

@@ -12,13 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-
 import net.proteanit.sql.DbUtils;
 
-
-
-public class LoanDetails extends JFrame implements ActionListener{
-	
+public class LoanDetails extends JFrame implements ActionListener{	
 	JTable t1;
     JButton b1, b2;
     JLabel l1, l2;
@@ -55,19 +51,18 @@ public class LoanDetails extends JFrame implements ActionListener{
             t1.setModel(DbUtils.resultSetToTableModel(rs));
             
             String str2 = "select * from students";
+
             rs = c.s.executeQuery(str2);
+
             while(rs.next()){
                 c1.add(rs.getString("registration_number"));
-            }
-            
-            
+            } 
         }catch(Exception e){
             e.printStackTrace();
         }
         
         c1.setBounds(180,20, 150, 20);
-        add(c1);
-        
+        add(c1);       
         c2.setBounds(520, 20, 150, 20);
         c2.add("January");
         c2.add("February");
@@ -95,27 +90,29 @@ public class LoanDetails extends JFrame implements ActionListener{
         
         JScrollPane sp = new JScrollPane(t1);
         sp.setBounds(0, 100, 700, 650);
-        add(sp);
-        
-    	
-    	
+        add(sp);    	
     }
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == b1){
             String str = "select * from rental where registration_number = '"+c1.getSelectedItem()+"' AND borrow_time = '"+"%"+c2.getSelectedItem()+"%"+"'";
+            
             try{
                 Connections c = new Connections();
                 ResultSet rs = c.s.executeQuery(str);
                 t1.setModel(DbUtils.resultSetToTableModel(rs));
-            }catch(Exception e1){}
+            }catch(Exception e1){
+                e1.printStackTrace();
+            }
+
         }else if(e.getSource() == b2){
             try{
                 t1.print();
-            }catch(Exception e1){}
+            }catch(Exception e1){
+                e1.printStackTrace();
+            }
         }
-		
 	}
 	
 	public static void main(String[] args){

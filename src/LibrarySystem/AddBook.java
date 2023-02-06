@@ -22,7 +22,6 @@ public class AddBook extends JFrame implements ActionListener {
 	JButton b1, b2;
 
 	AddBook() {
-
 		setBounds(500, 220, 850, 400);
 		setLayout(null);
 		getContentPane().setBackground(Color.WHITE);
@@ -84,13 +83,10 @@ public class AddBook extends JFrame implements ActionListener {
 		JLabel l8 = new JLabel(i3);
 		l8.setBounds(450, 50, 400, 300);
 		add(l8);
-		
-		
 	}
 
 	public void actionPerformed(ActionEvent ae) {
 		if (ae.getSource() == b1) {
-
 			String s3 = t1.getText();
 			String s4 = t2.getText();
 			String s5 = t3.getText();
@@ -103,6 +99,7 @@ public class AddBook extends JFrame implements ActionListener {
 				this.setVisible(false);
 
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 		} else if (ae.getSource() == b2) {
@@ -112,7 +109,5 @@ public class AddBook extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 		new AddBook().setVisible(true);
-
 	}
-
 }

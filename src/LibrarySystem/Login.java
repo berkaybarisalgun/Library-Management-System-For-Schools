@@ -24,10 +24,12 @@ import java.util.Random;
 public class Login extends JFrame implements ActionListener {
 
 	Random rand = new Random();
+
 	int a = rand.nextInt(10);
 	int b = rand.nextInt(10);
 	String islem = a + "+" + b;
 	int islem2 = a + b;
+
 	JLabel label1, label2, label3, label4, label5;
 	JTextField textf1, textf2, textf3;
 	JPasswordField passf;
@@ -40,7 +42,6 @@ public class Login extends JFrame implements ActionListener {
 	}
 
 	Login() {
-
 		super("Login Page");
 		setLayout(null);
 		getContentPane().setBackground(Color.white);
@@ -124,7 +125,6 @@ public class Login extends JFrame implements ActionListener {
 		setLayout(new BorderLayout());
 		setSize(640, 300);
 		setLocation(600, 300);
-
 	}
 
 	@Override
@@ -133,12 +133,12 @@ public class Login extends JFrame implements ActionListener {
 			if (e.getSource() == button4) {
 				String a = textf3.getText();
 				int b = Integer.parseInt(a);
+
 				if (islem2 == b) {
 					JOptionPane.showMessageDialog(null, "verified successfully");
 				} else {
 					JOptionPane.showMessageDialog(null, "not succesful to verify YOU ARE A ROBOT");
 					this.setVisible(false);
-
 				}
 			}
 		} catch (Exception e1) {
@@ -164,9 +164,9 @@ public class Login extends JFrame implements ActionListener {
 					textf1.setText("");
 					passf.setText("");
 				}
-
 			} catch (Exception e1) {
 				e1.printStackTrace();
+
 				System.out.println("error: " + e1);
 			}
 
@@ -174,16 +174,12 @@ public class Login extends JFrame implements ActionListener {
 			this.setVisible(false);
 		} else if (e.getSource() == button3) {
 			this.setVisible(false);
+
 			new Signup().setVisible(true);
-
 		}
-
 	}
 
 	public static void main(String[] args) {
-
 		new Login().setVisible(true);
-
 	}
-
 }

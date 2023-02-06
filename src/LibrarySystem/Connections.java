@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Connections {
-
 	Connection con;
 	Statement s;
 
@@ -16,9 +15,7 @@ public class Connections {
 			con = DriverManager.getConnection("jdbc:mysql:///slms", "root", "admin");
 			s = con.createStatement();
 		} catch (Exception e) {
-
 			System.out.println(e);
 		}
 	}
-
 }

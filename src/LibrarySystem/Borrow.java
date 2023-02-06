@@ -71,14 +71,12 @@ public class Borrow extends JFrame implements ActionListener {
 		setLayout(new BorderLayout());
 
 		add(p, "Center");
-
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
 		if (e.getSource() == b1) {
-
 			try {
 				String name = t1.getText();
 
@@ -87,6 +85,7 @@ public class Borrow extends JFrame implements ActionListener {
 				Connections c1 = new Connections();
 				String deger = "";
 				Resultset rs = (Resultset) c1.s.executeQuery(book_name);
+
 				if (((ResultSet) rs).next()) {
 					deger = ((ResultSet) rs).getString("name");
 				}
@@ -106,11 +105,9 @@ public class Borrow extends JFrame implements ActionListener {
 		} else if (e.getSource() == b2) {
 			this.setVisible(false);
 		}
-
 	}
 
 	public static void main(String[] args) {
 		new Borrow("ala").setVisible(true);
 	}
-
 }
