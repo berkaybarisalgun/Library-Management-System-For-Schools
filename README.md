@@ -1,7 +1,7 @@
 # Library-Management-System-For-Schools
  Library Management System For Schools<br>
  ## Introduction:
-The Library Management System for Schools is a desktop application that streamlines the process of managing school libraries. With this application, librarians can<br> easily store and view information about books, magazines, and other library materials, as well as track the circulation of these items.<br>
+The Library Management System for Schools is a desktop application that streamlines the process of managing school libraries. With this application, librarians can easily store and view information about books, magazines, and other library materials, as well as track the circulation of these items.<br>
 
 ## Key Features:
 Catalog Management: Store and view information about books, magazines, and other library materials.<br>
