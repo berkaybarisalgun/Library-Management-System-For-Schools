@@ -30,6 +30,6 @@ Use the reporting feature to generate reports on the usage of library materials.
 Fixed a bug where the application was crashing when opening certain files<br>
 Improved code readability by using descriptive variable names and adding comments where necessary
 
-### v1.1.0(2023-02-07)
+### v1.0.1(2023-02-07)
 - Captcha feature added to the application to enhance security and prevent automated spam.
 
