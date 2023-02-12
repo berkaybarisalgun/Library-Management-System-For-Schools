@@ -35,5 +35,5 @@ Use the reporting feature to generate reports on the usage of library materials.
 
 ### v1.0.2(2023-02-12)
 - The error in sorting by registration number in the Loan details section has been fixed
-- a new sorting by book name has been added
+- New sorting by book name has been added
 
