@@ -27,13 +27,13 @@ Use the reporting feature to generate reports on the usage of library materials.
 ## Changelog
 
 ### v1.0.0(2023-02-06)
--Fixed a bug where the application was crashing when opening certain files<br>
--Improved code readability by using descriptive variable names and adding comments where necessary
+- Fixed a bug where the application was crashing when opening certain files<br>
+- Improved code readability by using descriptive variable names and adding comments where necessary
 
 ### v1.0.1(2023-02-07)
 - Captcha feature added to the application to enhance security and prevent automated spam
 
 ### v1.0.2(2023-02-12)
--The error in sorting by registration number in the Loan details section has been fixed
--a new sorting by book name has been added
+- The error in sorting by registration number in the Loan details section has been fixed
+- a new sorting by book name has been added
 
