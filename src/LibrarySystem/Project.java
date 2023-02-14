@@ -169,6 +169,8 @@ public class Project extends JFrame implements ActionListener {
 		} else if (msg.equals("Borrow")) {
 
 			new Borrow(registration_number).setVisible(true);
+			new Books().setVisible(true);
+			
 		}
 
 		else if (msg.equals("Books")) {

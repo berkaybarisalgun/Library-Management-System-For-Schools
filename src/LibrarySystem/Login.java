@@ -22,6 +22,7 @@ import com.mysql.cj.protocol.Resultset;
 import java.util.Random;
 
 public class Login extends JFrame implements ActionListener {
+	boolean x=false;
 
 	Random rand = new Random();
 
@@ -125,10 +126,12 @@ public class Login extends JFrame implements ActionListener {
 		setLayout(new BorderLayout());
 		setSize(640, 300);
 		setLocation(600, 300);
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		try {
 			if (e.getSource() == button4) {
 				String a = textf3.getText();
@@ -136,6 +139,9 @@ public class Login extends JFrame implements ActionListener {
 
 				if (islem2 == b) {
 					JOptionPane.showMessageDialog(null, "verified successfully");
+					x=true;
+					
+					
 				} else {
 					JOptionPane.showMessageDialog(null, "not succesful to verify YOU ARE A ROBOT");
 					this.setVisible(false);
@@ -147,28 +153,34 @@ public class Login extends JFrame implements ActionListener {
 		}
 
 		if (e.getSource() == button1) {
-			try {
-				Connections c = new Connections();
-				String a = textf1.getText();
-				String b = passf.getText();
-				String user = choice1.getSelectedItem();
-				String query = "select * from login where school_number='" + a + "' and password='" + b + "' and user='"
-						+ user + "'";
-				Resultset rs = (Resultset) c.s.executeQuery(query);
-				if (((ResultSet) rs).next()) {
-					String regnum = ((ResultSet) rs).getString("registration_number");
-					new Project(regnum, user).setVisible(true);
-					this.setVisible(false);
-				} else {
-					JOptionPane.showMessageDialog(null, "Invalid login");
-					textf1.setText("");
-					passf.setText("");
-				}
-			} catch (Exception e1) {
-				e1.printStackTrace();
+			if(x==true) {
+				try {
+					Connections c = new Connections();
+					String a = textf1.getText();
+					String b = passf.getText();
+					String user = choice1.getSelectedItem();
+					String query = "select * from login where school_number='" + a + "' and password='" + b + "' and user='"
+							+ user + "'";
+					Resultset rs = (Resultset) c.s.executeQuery(query);
+					if (((ResultSet) rs).next()) {
+						String regnum = ((ResultSet) rs).getString("registration_number");
+						new Project(regnum, user).setVisible(true);
+						this.setVisible(false);
+					} else {
+						JOptionPane.showMessageDialog(null, "Invalid login");
+						textf1.setText("");
+						passf.setText("");
+					}
+				} catch (Exception e1) {
+					e1.printStackTrace();
 
-				System.out.println("error: " + e1);
+					System.out.println("error: " + e1);
+				}
 			}
+			else {
+				JOptionPane.showMessageDialog(null, "Verify yourself");
+			}
+			
 
 		} else if (e.getSource() == button2) {
 			this.setVisible(false);
