@@ -51,5 +51,5 @@ It's important to note that the process of importing a database can vary dependi
 - New sorting by book name has been added
 
 ### v1.0.3(2023-02-14)
--Required database files have been added to use the project.
+- Required database files have been added to use the project.
 
