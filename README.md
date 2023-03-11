@@ -34,7 +34,8 @@ Next, you will need to import the SQL commands that are provided in this project
 
 Once the SQL file has been imported, you should be able to access the database and use it for your own purposes. To access the database, you will need to use the login credentials that you have set up in your DBMS.<br>
 
-It's important to note that the process of importing a database can vary depending on the specific DBMS you are using, so it's recommended to consult the documentation or seek assistance from a database administrator or developer if you encounter any issues.<br>
+It's important to note that the process of importing a database can vary depending on the specific DBMS you are using, Feel free to write to me if you encounter any problems. My [Linkedin](https://www.linkedin.com/in/barisalgun/) account is here for you.
+<br>
 
 
 ## Changelog
