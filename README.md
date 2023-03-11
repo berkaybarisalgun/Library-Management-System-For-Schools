@@ -28,7 +28,7 @@ Use the reporting feature to generate reports on the usage of library materials.
 
 To use the database provided in this project, you will need to create a new database and import the SQL commands that are provided.<br>
 
-To create a new database, you will need to use a database management system (DBMS) such as MySQL or PostgreSQL. Once you have installed and configured your DBMS, you can create a new database with the name of your choice.<br>
+To create a new database, you will need to use a database management system (DBMS) such as MySQL or PostgreSQL.<br>
 
 Next, you will need to import the SQL commands that are provided in this project. The SQL file is located in the database folder. To import the file, you will need to use the import tool in your DBMS. This tool is usually accessible from the DBMS's graphical user interface (GUI) or through the command line interface (CLI).<br>
 
